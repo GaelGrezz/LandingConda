@@ -62,7 +62,7 @@ with st.container(border=True, ):
     sub_columns = st.columns([2, 1], gap="medium", vertical_alignment="center")
     
     with sub_columns[0]:
-        st.subheader(":alarm_clock: Consolida tus datos por fecha")
+        st.subheader(":alarm_clock: Consolida tus datos por fecha... O como quieras")
         st.text("Organiza y visualiza tus datos cronológicamente para un análisis más efectivo.")
     
     with sub_columns[1]:
@@ -83,7 +83,7 @@ with st.container(border=True, ):
     sub_columns = st.columns([2, 1], gap="small", vertical_alignment="center")
     
     with sub_columns[0]:
-        st.subheader(":eyes: Ve el resultado de tu consolidación y comprueba los resultados", width=550)
+        st.subheader(":eyes: Ve el resultado de tu consolidación y comprueba los números", width=550)
         st.text("Visualiza los datos consolidados de manera clara y precisa para facilitar la toma de decisiones informadas.", width=550)
         
     with sub_columns[1]:
