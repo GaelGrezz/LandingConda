@@ -1,0 +1,11 @@
+[theme]
+redColor = "#ff3c3cff"
+
+base = "light"
+headingFont = "serif "
+headingFontSizes = ["2.875rem", "3.5rem"]
+headingFontWeights =[
+    700,
+    400,
+]
+font = "fallback-cool-font sans"
