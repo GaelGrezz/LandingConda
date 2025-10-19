@@ -104,8 +104,7 @@ with st.form("contact_form"):
         
         st.form_submit_button("Leer aviso de privacidad", type="tertiary", on_click=lambda: aviso_privacidad())
         
-        checkbox = st.checkbox("He leído el **Aviso de privacidad** y acepto que mis datos sean utilizados para contactarme respecto a CONDA web.", value=False, help="Al marcar esta casilla, aceptas que tus datos sean utilizados exclusivamente para fines de contacto relacionados con CONDA web.")
+        checkbox = st.caption("Acepto que mis datos sean utilizados para contactarme respecto a CONDA web.", help="Al llenar y envir el formulario, aceptas que tus datos sean utilizados exclusivamente para fines de contacto relacionados con CONDA web.", )
         
         st.form_submit_button("¡Haz clic para pedir **la diferencia**!", type="primary")
-
 st.markdown("<p style='font-size:12px'><i>Créditos a <a href='https://unsplash.com/es/@tashakostyuk'>Tasha Kostyuk</a> por sus ilustraciones. Landing page de uso académico</i></p>", unsafe_allow_html=True)
