@@ -1,5 +1,9 @@
 import streamlit as st
 
+@st.dialog("Aviso de privacidad", dismissible=True, width="medium")
+def aviso_privacidad():
+    return 
+
 st.set_page_config(
     page_title="CONDA web",
     page_icon=":books:",
@@ -12,7 +16,7 @@ columns = st.columns([1.5, 2], gap="medium", vertical_alignment="center")
 with columns[0]:
     st.title("Consolida tu conocimiento y deja a lado los problemas...")
     st.header("*CONDA :violet[web]*", anchor="CONDA web", )
-    st.button("¡Haz clic para pedir **la diferencia**!", type="primary", width="content", key="buttom_top_header")
+    st.link_button("¡Haz clic para pedir **la diferencia**!", "#Form", type="primary", use_container_width=True, )
     
 with columns[1]:
     st.image("https://cdn.pixabay.com/photo/2024/10/19/07/12/man-9132119_1280.jpg", width=700)
@@ -91,9 +95,17 @@ with st.container(border=True, ):
 
 st.divider()
 
-st.header("¡Empieza con la mejor solución hoy mismo con _CONDA :violet[web]!_ :tada:")
+st.header("¡Empieza con la mejor solución hoy mismo con _CONDA :violet[web]!_ :tada:", anchor="Form")
 
-if st.button("¡Haz clic para pedir **la diferencia**!", type="primary", width="content", key="bottom_footer"):
-    st.success("¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.")
+with st.form("contact_form"):
+        correo = st.text_input("Correo electrónico", placeholder="", type="default", help="Ingresa tu correo electrónico para que podamos contactarte.", icon="📨")
+        
+        cel = st.text_input("Número de teléfono", placeholder="", type="default", help="Ingresa tu número de teléfono para que podamos contactarte.", icon="📱")
+        
+        st.form_submit_button("Leer aviso de privacidad", type="tertiary", on_click=lambda: aviso_privacidad())
+        
+        checkbox = st.checkbox("He leído el **Aviso de privacidad** y acepto que mis datos sean utilizados para contactarme respecto a CONDA web.", value=False, help="Al marcar esta casilla, aceptas que tus datos sean utilizados exclusivamente para fines de contacto relacionados con CONDA web.")
+        
+        st.form_submit_button("¡Haz clic para pedir **la diferencia**!", type="primary")
 
 st.markdown("<p style='font-size:12px'><i>Créditos a <a href='https://unsplash.com/es/@tashakostyuk'>Tasha Kostyuk</a> por sus ilustraciones. Landing page de uso académico</i></p>", unsafe_allow_html=True)
