@@ -260,8 +260,8 @@ with st.form("contact_form"):
     )
 
     checkbox = st.checkbox(
-        "Acepto que mis datos sean utilizados para contactarme respecto a CONDA web.",
-        help="Al llenar y enviar el formulario, aceptas que tus datos sean utilizados exclusivamente para fines de contacto relacionados con CONDA web.",
+        "Acepto que he leído el Aviso de privacidad que ha sido proveído por Firma Gutiérrez de S.A. de C.V.",
+        help="Al llenar y enviar el formulario, aceptas que tus datos sean utilizados exclusivamente para fines de contacto relacionados con CONDA web según lo establecido en el Aviso de privacidad.",
     )
 
     promociones = st.checkbox(
