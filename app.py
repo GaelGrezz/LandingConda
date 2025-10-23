@@ -256,7 +256,7 @@ with st.form("contact_form"):
     )
 
     st.form_submit_button(
-        "Leer aviso de privacidad", type="tertiary", on_click=lambda: aviso_privacidad()
+        "Leer aviso de privacidad", type="primary", on_click=lambda: aviso_privacidad()
     )
 
     checkbox = st.checkbox(
